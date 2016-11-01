@@ -1,0 +1,516 @@
+/*============================================
+---------------- Global Reset ----------------
+============================================*/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*-------------- Kill Bullets --------------*/
+
+li:not(.skill) {
+    list-style: none;
+}
+
+
+/*------------- Anchor Styles --------------*/
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*============================================
+---------------- Utility ---------------------
+============================================*/
+
+
+/*-------------- "Clearfix" ----------------*/
+
+.group::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*============================================
+---------------- Shared Styles ---------------
+============================================*/
+
+
+/*---------------- Typography --------------*/
+
+.name {
+    font-size: 2em;
+}
+
+.occupation {
+    font-size: 1.7em;
+}
+
+.section-title,
+.footer-title {
+    font-size: 1.2em;
+}
+
+.address1::before,
+.nationality::before,
+.mobile::before,
+.landline::before,
+.linkedin::before,
+.facebook::before,
+.twitter::before {
+    font-family: "FontAwesome";
+}
+
+
+/*------------------ Color -----------------*/
+
+li,
+p {
+    color: #f3f3f3;
+}
+
+hgroup,
+.section-title,
+.footer-title,
+.company,
+.school,
+.date,
+footer {
+    color: #fafafa;
+}
+
+
+/*---------------- Position -----------------*/
+
+.address2,
+.nationality,
+.mobile,
+.landline,
+.date,
+section * p:last-of-type {
+    position: relative;
+}
+
+hgroup,
+.photo,
+.contact-info {
+    position: absolute;
+}
+
+
+/*---------------- Alignment ----------------*/
+
+.name,
+.occupation,
+.footer-title,
+.social-icons {
+    text-align: center;
+}
+
+.objective p,
+section * p:last-of-type {
+    text-align: justify;
+}
+
+
+/*----------------- Floats ------------------*/
+
+.objective p,
+.skills ul,
+.section-title,
+.company,
+.school {
+    float: left;
+}
+
+
+/*--------------- Display ------------------*/
+
+.date,
+.social-icons li {
+    display: inline-block;
+}
+
+
+/*============================================
+---------------- Main Styles -----------------
+============================================*/
+
+body {
+    font-family: Arial;
+    background-color: #0a1f33;
+    /*#2C3E50;*/
+    line-height: 1.3;
+}
+
+article {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/*----------- Header -------------*/
+
+.photo {
+    top: 50px;
+    left: 9.5%;
+    width: 140px;
+    border-radius: 50%;
+    border: 5px solid #51b5bb;
+}
+
+hgroup {
+    top: 78px;
+    left: 50%;
+    -webkit-transform: -webkit-translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.contact-info {
+    top: 60px;
+    right: 9%;
+}
+
+.contact-info li {
+    margin-bottom: 3px;
+}
+
+.address1::before {
+    content: "\f041";
+}
+
+.address2 {
+    right: -19px;
+}
+
+.nationality {
+    right: 7px;
+}
+
+.nationality::before {
+    content: "\f024";
+    padding-right: 9px;
+}
+
+.mobile,
+.landline {
+    right: 4px;
+}
+
+.mobile::before,
+.landline::before {
+    content: "\f095";
+}
+
+.address1::before,
+.mobile::before,
+.landline::before {
+    padding-right: 10px;
+}
+
+.address1::before,
+.mobile::before,
+.landline::before,
+.nationality::before {
+    color: #51b5bb;
+}
+
+.mobile a,
+.landline a {
+    color: #f3f3f3;
+    transition: all 0.25s ease-in-out;
+    text-shadow: none;
+}
+
+.mobile a:hover,
+.mobile a:focus,
+.landline a:hover,
+.landline a:focus {
+    color: #fff;
+    text-shadow: 0 0 9px #fff;
+}
+
+
+/*===============================
+----------- Sections ------------
+===============================*/
+
+section {
+    padding-bottom: 20px;
+    background-color: transparent;
+    transition: all 0.25s ease-in-out;
+    border-bottom: 2px solid #51b5bb;
+}
+
+section:hover,
+section:focus {
+    background-color: #101317;
+    /*#1a252f;*/
+}
+
+.objective {
+    border-top: 2px solid #51b5bb;
+    margin-top: 250px;
+}
+
+.objective p {
+    width: 50%;
+}
+
+.skills ul {
+    width: 50%;
+}
+
+.objective p,
+.skills ul {
+    margin-top: 20px;
+}
+
+.section-title {
+    width: 13%;
+    margin-right: 15%;
+    padding-left: 5px;
+}
+
+section * div {
+    padding-top: 20px;
+}
+
+section * p:last-of-type {
+    left: 28%;
+    width: 50%;
+}
+
+.education {
+    margin-bottom: 15px;
+}
+
+.company,
+.school,
+p {
+    width: 33.33%;
+}
+
+.company:not(#company1),
+.school:not(#school1) {
+    margin-left: 28%;
+}
+
+.date {
+    right: -30%;
+    font-weight: bold;
+    width: 3.5%;
+}
+
+
+/*===============================
+------------ Footer -------------
+===============================*/
+
+footer {
+    padding-bottom: 20px;
+}
+
+.footer-title {
+    padding: 5px 0;
+}
+
+.social-icons {
+    padding-left: 8px;
+}
+
+.social-icons li {
+    font-size: 1.4em;
+    transition: all .25s ease-in-out;
+}
+
+.social-icons li:hover,
+.social-icons li:focus {
+    color: #51b5bb;
+    cursor: pointer /*Fake anchor tags*/
+}
+
+.linkedin::before {
+    content: "\f08c";
+}
+
+.facebook::before {
+    content: "\f09a";
+}
+
+.twitter::before {
+    content: "\f081";
+}
+
+.linkedin::before,
+.facebook::before,
+.twitter::before {
+    padding-right: 9px;
+}
+
+
+/*==============================
+-------- Media Queries --------
+===============================*/
+
+
+/*---- Tablets (iPad Air used for checking) ----*/
+
+
+/*--- Small tweaks for Landscape mode ---*/
+
+@media only screen and (max-width: 1024px) {
+    /*------- Sections -------*/
+    .objective p,
+    .skills ul {
+        width: 60%;
+    }
+    section * p:last-of-type {
+        width: 60%;
+        left: 24%;
+    }
+    /*------- Section Titles -------*/
+    .section-title {
+        width: 9%;
+    }
+    .company:not(#company1),
+    .school:not(#school1) {
+        margin-left: 24%;
+    }
+}
+
+
+/*--- Main styles for tablet (with portrait mode in mind)----*/
+
+@media only screen and (max-width: 836px) {
+    article {
+        min-width: 480px;
+    }
+    /*---------- Typography ------------*/
+    .name {
+        font-size: 1.6em;
+    }
+    .occupation {
+        font-size: 1.4em;
+    }
+    /*----------- Alignment ------------*/
+    .objective p,
+    section * p:last-of-type {
+        text-align: initial;
+    }
+    /*----------- Floats --------------*/
+    .objective p,
+    .skills ul,
+    .section-title,
+    .company,
+    .school {
+        float: none;
+    }
+    /*------------ Header -------------*/
+    .photo {
+        left: 50%;
+        -webkit-transform: -webkit-translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    hgroup {
+        top: 220px;
+    }
+    .contact-info {
+        top: 310px;
+        left: 5%;
+        margin-right: 0;
+    }
+    .address1,
+    .address2 {
+        width: 140px;
+    }
+    .mobile,
+    .landline {
+        right: -45%;
+        top: -71px;
+        width: 111px;
+    }
+    .nationality {
+        right: -85%;
+        top: -47px;
+        display: inline-block;
+        width: auto;
+    }
+    .objective {
+        margin-top: 390px;
+        border-top: 2px solid #51b5bb;
+    }
+    .objective p {
+        width: 100%;
+    }
+    .skills ul {
+        width: 100%;
+        padding-left: 3%;
+    }
+    .objective p,
+    .skills ul {
+        margin-top: 8px;
+    }
+    .section-title {
+        padding-left: 0;
+        padding-top: 5px;
+    }
+    section * p:last-of-type {
+        left: 0;
+        width: 100%;
+    }
+    .education {
+        margin-bottom: 15px;
+    }
+    .company,
+    .school,
+    p {
+        width: 100%;
+    }
+    .company:not(#company1),
+    .school:not(#school1) {
+        margin-left: 0;
+    }
+    .date {
+        right: 0;
+    }
+}
+
+
+/*---- Smartphones (iPhone 4S used for checking) ----*/
+
+@media only screen and (max-width: 480px) {
+    .photo {
+        left: 55%; /* Could not figure out how to keep it centered without this adjustment
+                    transform:translateX property not working as expected =( */
+    }
+    hgroup {
+        left: 30%; /*Could not figure out how to keep it centered without this adjustment
+                    transform:translateX property not working as expected =( */
+    }
+    .contact-info {
+        left: 5%;
+    }
+    .mobile,
+    .landline {
+        right: -68%;
+    }
+    .nationality {
+        right: -129%;
+    }
+    section {
+        margin: 0 3.5%;
+    }
+}
