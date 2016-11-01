@@ -1,0 +1,433 @@
+/*============================================
+---------------- Global Reset ----------------
+============================================*/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*-------------- Kill Bullets --------------*/
+
+li {
+    list-style: none;
+}
+
+
+/*------------- Anchor Styles --------------*/
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*============================================
+---------------- Utility ---------------------
+============================================*/
+
+/*-------------- "Clearfix" ----------------*/
+
+.group::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*============================================
+---------------- Shared Styles ---------------
+============================================*/
+
+/*------------------ Fonts -----------------*/
+
+h2,
+h3,
+li,
+footer,
+.article-title::before {
+    font-family: 'Lato', sans-serif;
+}
+
+.newsbox .newstext,
+.main-text {
+    font-family: 'Crimson Text', serif;
+}
+
+.slogan,
+.newstitle,
+#copy::after {
+    font-family: 'Satisfy', cursive;
+}
+
+.newsheading,
+.newstitle,
+#copy::after {
+    font-size: 1.5em;
+}
+
+
+/*============================================
+---------------- Main Styles -----------------
+============================================*/
+
+body {
+    background-color: #669a66;
+    font-size: 100%;
+    border-top: 4px solid #305630;
+    hyphens: auto;
+}
+
+
+/*-------------- Main Container -------------*/
+
+.main-container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 -5px 17px -6px #000;
+}
+
+.content {
+    padding: 0 1.4em;
+    background-color: #fafafa;
+    background-color: rgba(250, 250, 250, 0.93); /*fallback hex color*/
+}
+
+
+/*-------------- Header Content -------------*/
+
+header {
+    position: relative;
+    padding-top: 12px;
+    margin-bottom: 15px;
+}
+
+.logo {
+    float: left;
+    height: auto;
+    width: 11%;
+    margin-left: -9px;
+}
+
+.slogan {
+    position: absolute;
+    top: 39%;
+    left: 11%;
+    display: inline-block;
+    font-size: 1.7em;
+}
+
+.menu {
+    float: right;
+}
+
+.menu-items {
+    float: left;
+    width: 4em;
+    padding: 0.25em 0;
+    margin: 34px 0.3em;
+    text-align: center;
+    border-radius: 0.25em;
+    color: #fff;
+    background-color: #3c673c;
+    box-shadow: 0 0 1px #000;
+    border: solid transparent 2px;
+    transition: all 0.15s ease-in-out;
+}
+
+.menu-items:hover,
+.menu-items:focus {
+    color: #3c673c;
+    border-color: #3c673c;
+    background-color: #fafafa;
+}
+
+
+/*-------------- Ambience Image ------------*/
+
+.ambience img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    box-shadow: 1px 0 4px #000;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+
+/*------------- News Section ---------------*/
+
+.newsheading {
+    margin-bottom: 12px;
+    padding: 0.25em 0;
+    padding-top: 5px;
+    text-align: center;
+    color: #fafafa;
+    background-color: #3c673c;
+    border-radius: 0.10em;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.news {
+    margin-bottom: 18px;
+}
+
+.newsbox {
+    padding: 1em;
+    margin: 0 0.2em;
+    margin-left: 7px;
+    margin-bottom: 10px;
+    float: left;
+    width: 32%;
+    border-radius: 0.20em;
+    border: 2px solid #000;
+    box-shadow: 1px 1px 4px #000;
+    background-color: transparent;
+    transition: all 0.15s ease-in-out;
+}
+
+.newsbox:hover,
+.newsbox:focus {
+    border-color: #3c673c;
+    background-color: #70bb70;
+    background-color: rgba(112, 187, 112, 0.31);  /*fallback hex color*/
+    cursor: pointer;
+}
+
+.newslogo {
+    float: left;
+    margin-right: 15px;
+    border: 1px solid #3c673c;
+}
+
+.newstitle {
+    margin-top: -3px;
+    color: #3c673c;
+    display: inline-block;
+}
+
+.newsbox .newstext {
+    font-size: 0.94em;
+    text-align: justify;
+    line-height: 1.2;
+}
+
+
+/*----------------- Article ----------------*/
+
+.article-title {
+    margin-bottom: 15px;
+    font-size: 1.38em;
+}
+
+.article-title::before {
+    content: "Oct 4";
+    background-color: #3c673c;
+    color: #fff;
+    font-size: 0.55em;
+    padding: 12px 5px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 4px #000;
+}
+
+.main-text {
+    padding: 0 0.25em;
+    padding-bottom: 100px;
+    text-align: justify;
+    line-height: 1.35;
+    font-size: 1.2em;
+}
+
+#last-separator {
+    margin-top: 20px;
+}
+
+
+/*------------------ Footer ------------------*/
+
+footer {
+    height: 51px;
+    line-height: 50px;
+    background-color: #305630;
+    color: #fff;
+}
+
+footer p:first-child {
+    float: left;
+    padding-left: 1.2em;
+}
+
+footer p:not(:first-child) {
+    float: right;
+    padding-right: 1.2em;
+}
+
+#copy::after {
+    content: "Jordi Torres";
+    color: #fafafa;
+    margin-left: 30px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+
+/*============================================
+/*------------- Media queries ----------------
+============================================*/
+
+@media screen and (max-width: 863px) {
+    .main-container {
+        min-width: 326px;
+    }
+    .newsbox {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+    .logo {
+        float: none;
+        width: 70px;
+        margin-bottom: -15px;
+    }
+    .ambience img {
+        margin-bottom: 8px;
+    }
+    .slogan {
+        position: static;
+        display: block;
+        margin-top: 16px;
+        font-size: 1.47em;
+    }
+    .menu {
+        position: absolute;
+        top: 30px;
+        left: 60px;
+    }
+    .menu-items {
+        float: none;
+        display: inline-block;
+        margin: 1px;
+    }
+}
+
+
+/*============================================
+/*-------------- Print Styles ----------------
+============================================*/
+
+    @media print {
+        @page {
+            margin: 2cm;
+        }
+        *,
+        *:before,
+        *:after {
+            background: transparent !important;
+            color: #000 !important;
+            box-shadow: none !important;
+            text-shadow: none !important;
+        }
+        a,
+        a:visited {
+            text-decoration: underline;
+        }
+        a[href]:after {
+            content: " (" attr(href) ")";
+        }
+        abbr[title]:after {
+            content: " (" attr(title) ")";
+        }
+        a[href^="#"]:after,
+        a[href^="javascript:"]:after {
+            content: "";
+        }
+        pre,
+        blockquote {
+            border: 1px solid #999;
+            page-break-inside: avoid;
+        }
+        thead {
+            display: table-header-group;
+        }
+        tr,
+        ul,
+        img {
+            page-break-inside: avoid;
+        }
+        img {
+            max-width: 100% !important;
+        }
+        p,
+        h2,
+        h3 {
+            orphans: 3;
+            widows: 3;
+        }
+        h2,
+        h3 {
+            page-break-after: avoid;
+        }
+        h1 {
+            position: relative;
+            padding-right: 150px;
+        }
+        h1::after {
+            content: url(https://chart.googleapis.com/chart?cht=qr&chs=150x150
+ &chl=http: //<?php print $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]; ?>
+            &choe=UTF-8);
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .logo,
+        .ambience,
+        .menu,
+        .newslogo,
+        a[href="#"],
+        hr:not(#copy) {
+            display: none;
+        }
+        body {
+            border-top: none;
+            font-size: 120%;
+        }
+
+        .slogan {
+            position: static;
+            display: block;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .newsheading {
+            text-align: left;
+        }
+        section {
+            margin-left: -35px;
+            margin-bottom: 50px;
+            width: 830px;
+        }
+
+        .newsheading {
+            margin-left: 7px;
+        }
+        .main-text {
+            padding-bottom: 40px;
+        }
+        footer p:first-child {
+            float: left;
+            padding-left: 1.6em;
+        }
+        footer p:not(:first-child) {
+            float: right;
+            padding-right: 1.6em;
+        }
+    }
+
